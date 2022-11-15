@@ -1,5 +1,2 @@
-
 /node_modules
 .env
-MONGODB_URL=
-PORT=4000
