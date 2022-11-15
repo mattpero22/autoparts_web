@@ -2,9 +2,10 @@ const express = require('express');
 const autopartsRouter = express.Router();
 const Autopart = require("../models/autopart.js")
 
+
 //INDUCES
 ////////////////////////INDEX ////////////////////////
-autopartsRouter.get("/autoparts", async (req, res) => {
+autopartsRouter.get("/", async (req, res) => {
     try {
         res.json(await Autopart.find({}));
     }
@@ -15,29 +16,13 @@ autopartsRouter.get("/autoparts", async (req, res) => {
 
 
 //////////////////////// NEW ////////////////////////
-app.post("/autoparts", async (req, res) => {
+autopartsRouter.post("/", async (req, res) => {
     try {
-        res.json(await People.create(req.body));
+        res.json(await Autopart.create(req.body));
     } catch (error) {
         res.status(400).json(error);
     }
 });
 
-//////////////////////// DELETE ////////////////////////
 
-
-//////////////////////// UPDATE ////////////////////////
-
-
-//////////////////////// CREATE ////////////////////////
-
-
-//////////////////////// EDIT ////////////////////////
-
-
-//////////////////////// SHOW ////////////////////////////
-
-
-module.exports = {
-
-}
+module.exports = autopartsRouter;
