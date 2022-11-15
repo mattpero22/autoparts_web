@@ -3,11 +3,12 @@ const Schema = mongoose.Schema;
 
 const autopartSchema = Schema({
     part_name: { type: String, required: true },
-    // supplier: { type: String , required: true},
-    // vin: { type: String, required: true},
-    // date_purchased: { type: Date, required: true },
+    vin: { type: String, required: true},
+    supplier_name: { type: String , required: true},
+    date_purchased: { type: Date, required: true },
     value: { type: String },
-    // img: { type: String },
+    img: { type: String },
+    qr: {type: String},
 })
 autopartSchema.set('collection', 'parts')
 
