@@ -27,13 +27,20 @@ autopartsRouter.post("/", async (req, res) => {
 // delete
 autopartsRouter.delete("/:id", async (req, res) => {
     try {
-        res.json(await prependOnceListener.findByIdAndRemove(req.params.id));
+        res.json(await Autopart.findByIdAndRemove(req.params.id));
     } catch (error) {
         res.status(400).json(error);
     }
 });
 
 // update
+autopartsRouter.put("/:id", async (req, res) => {
+    try {
+        res.json(await Autopart.findByIdAndUpdate(req.params.id, req.body, { new: true }));
+    } catch (error) {
+        res.status(400).json(error);
+    }
+});
 
 //show
 autopartsRouter.get("/:id", async (req, res) => {

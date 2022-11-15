@@ -9,6 +9,7 @@ const autopartSchema = Schema({
     value: { type: String },
     // img: { type: String },
 })
+autopartSchema.set('collection', 'parts')
 
 const Autopart = mongoose.model('Autopart', autopartSchema);
 module.exports = Autopart;

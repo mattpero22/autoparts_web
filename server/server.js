@@ -30,7 +30,6 @@ app.use(express.json());
 app.use(methodOverride('_method'));// allow POST, PUT and DELETE from a form
 app.use(express.urlencoded({ extended: false })); // body parser to access req.body
 
-
 //controllers
 app.use("/autoparts", autopartsController);
 
@@ -38,6 +37,5 @@ app.use("/autoparts", autopartsController);
 app.get("/", (req, res) => {
     res.send("hello world");
 });
-
 
 app.listen(PORT, () => console.log(`listening...`))
