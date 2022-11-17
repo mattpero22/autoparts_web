@@ -1,47 +1,53 @@
 import DirectoryItem from '../directory-item/directory-item.component';
 
-import './directory.styles.css';
+import './directory.styles.scss';
 
-const categories = [
+const autoParts =[
   {
     "id": 1,
-    "name": "hats",
-    'value':3,
-    
+    "title": "honda",
+    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
+    route:'shop/hats'
   },
   {
     "id": 2,
-    "name": "jackets",
-    'value':3,
-   
+    "title": "jackets",
+    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
+    route:'shop/jackets'
   },
   {
     "id": 3,
-    "name": "sneakers",
-    'value':3,
-    
+    "title": "sneakers",
+    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
+    route:'shop/sneakers'
+  },{
+    "id": 1,
+    "title": "honda",
+    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
+    route:'shop/hats'
   },
   {
-    "id": 4,
-    "name": "womens",
-    'value':3,
+    "id": 2,
+    "title": "jackets",
+    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
+    route:'shop/jackets'
+  },
+  {
+    "id": 3,
+    "title": "sneakers",
+    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
+    route:'shop/sneakers'
+  },
 
-    
-  },
-  {
-    "id": 5,
-    "name": "mens",
-    'value':3,
-   
-  }
 ]
-function Directory(){
+
+const Directory = () => {
   
     return (
         <div className="directory-container">
-      {categories.map((category) => (
-        <DirectoryItem key= {category.id} category={category}/>
-        
+      {autoParts.map((part) => (
+        <DirectoryItem key= {part.id} part={part} />
+                
       ))}
     </div>
     );

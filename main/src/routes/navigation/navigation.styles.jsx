@@ -4,19 +4,16 @@ import { Link } from "react-router-dom";
 
 export const NavigationContainer = styled.div`
   height: 70px;
-  width: 150%;
+  width: 100%;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 `;
 
 export const LogoContainer = styled(Link)`
   height: 100%;
   width: 70px;
   padding: 25px;
-
-  &hover:
-  
 `;
 
 export const NavLinks = styled.div`
@@ -28,7 +25,6 @@ export const NavLinks = styled.div`
 `;
 
 export const NavLink = styled(Link)`
-  padding: 100px 45px;
+  padding: 10px 15px;
   cursor: pointer;
-  text-decoration: none;
 `

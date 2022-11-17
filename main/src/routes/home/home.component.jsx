@@ -2,14 +2,13 @@ import { Outlet } from 'react-router-dom';
 import Directory from '../../components/directory/directory.component.jsx';
 
 import {HomeTitle} from './home.component.styles.jsx';
-function Home() {
+const Home = () => {
 
-    
   return (
 
   
     <div>
-        <HomeTitle> Welcome To Crown Clothing </HomeTitle>
+        <HomeTitle> ALPHA AUTO PARTS </HomeTitle>
        <Outlet />
         <Directory />
         
@@ -19,3 +18,4 @@ function Home() {
 };
 
 export default Home;
+
