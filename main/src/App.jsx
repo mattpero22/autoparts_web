@@ -1,11 +1,14 @@
 import React from 'react';
 import './App.css';
 
+import Main from "./components/Main"
+
+
 function App() {
   return (
-    <p>
-      Cleanedup React App
-    </p>
+    <div className='app'>
+      <Main> </Main>
+    </div>
   );
 }
 
