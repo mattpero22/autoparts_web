@@ -3,12 +3,29 @@ import CategoriesPreview from "../../components/categories-preview/categories-pr
 
 import Category from "../category/category.component";
 import { CategoriesProvider } from "../../contexts/categories.context";
+import SearchBox from "../../components/search-box/search-box.component";
 
 import "./shop.styles.scss";
 import { useEffect, useState } from "react";
 
 export const Shop = () => {
   const [parts, setParts] = useState([]);
+
+  const [searchField, setSearchField] = useState(""); //[value,setValue]
+
+  const [filteredParts, setFilteredParts] = useState(parts);
+
+  // useEffect(() => {
+  //   const newFilteredParts = parts.filter((part) => {
+  //     return part.name.toLocaleLowerCase().includes(searchField);
+  //   });
+  //   setFilteredParts(newFilteredParts);
+  // }, [parts, searchField]);
+
+  const onSearchChange = (event) => {
+    const searchFieldString = event.target.value.toLocaleLowerCase();
+    setSearchField(searchFieldString);
+  };
 
   useEffect(() => {
     async function fetchData() {
@@ -22,15 +39,29 @@ export const Shop = () => {
   }, []);
 
   return (
+    
     <div id="main">
-        <h1>SHOP AUTO PARTS</h1>
-        <div id="parts">
-        {parts.map((part)=>{
-            return <p key ={part._id}> {part.part_name} {part.price} </p>;
+     
+      <h1>SHOP AUTO PARTS</h1>
+      <SearchBox
+        className="monsters search-box"
+        onChangeHandler={onSearchChange}
+        placeholder="Search Car Parts..."
+      />
+      <div id="parts">
+        
+        {parts.map((part) => {
+          return (
+            <p key={part._id}>
+              {" "}
+              {part.part_name} {part.price}{" "}
+            </p>
+          );
         })}
-        </div>
+      </div>
     </div>
-  )
-}
+    
+  );
+};
 
 export default Shop;

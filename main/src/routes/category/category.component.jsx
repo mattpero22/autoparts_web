@@ -23,9 +23,7 @@ const Category = () => {
           <ProductCard key={product.id} product={product} />
         ))}
     </CategoryContainer>
-      
-      </Fragment>
-  
+   </Fragment>
   );
 };
 

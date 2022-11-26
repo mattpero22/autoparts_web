@@ -15,4 +15,7 @@ export const GlobalStyle = createGlobalStyle`
 	* {
 		box-sizing: border-box;
 	}
+	@media (max-width: 40rem) {
+		right: 5rem;
+	  }
 `;

@@ -5,40 +5,22 @@ import './directory.styles.scss';
 const autoParts =[
   {
     "id": 1,
-    "title": "honda",
-    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
+    "title": "Used Car Parts",
+    "imageUrl": "https://chuckranautopartsinc.com/wp-content/uploads/2021/08/shutterstock_1717863949.jpg",
     route:'shop/hats'
   },
   {
     "id": 2,
-    "title": "jackets",
-    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
+    "title": "Used Car Parts",
+    "imageUrl": "https://di-uploads-pod14.dealerinspire.com/toyotaoforlando/uploads/2019/04/car-parts.jpg",
     route:'shop/jackets'
   },
   {
     "id": 3,
-    "title": "sneakers",
-    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
-    route:'shop/sneakers'
-  },{
-    "id": 1,
-    "title": "honda",
-    "imageUrl": "https://i.ibb.co/cvpntL1/hats.png",
-    route:'shop/hats'
-  },
-  {
-    "id": 2,
-    "title": "jackets",
-    "imageUrl": "https://i.ibb.co/px2tCc3/jackets.png",
-    route:'shop/jackets'
-  },
-  {
-    "id": 3,
-    "title": "sneakers",
-    "imageUrl": "https://i.ibb.co/0jqHpnp/sneakers.png",
+    "title": "Used Car Parts",
+    "imageUrl": "https://www.crsautomotive.com/wp-content/uploads/2020/10/set-of-car-parts-on-background.jpg",
     route:'shop/sneakers'
   },
-
 ]
 
 const Directory = () => {
