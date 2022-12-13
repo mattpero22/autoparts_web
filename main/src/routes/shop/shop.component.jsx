@@ -44,12 +44,12 @@ export const Shop = () => {
      
       <h1>SHOP AUTO PARTS</h1>
       <SearchBox
-        className="monsters search-box"
+        className="search-box"
         onChangeHandler={onSearchChange}
         placeholder="Search Car Parts..."
       />
       <div id="parts">
-        
+        <li>
         {parts.map((part) => {
           return (
             <p key={part._id}>
@@ -58,6 +58,9 @@ export const Shop = () => {
             </p>
           );
         })}
+
+        </li>
+       
       </div>
     </div>
     

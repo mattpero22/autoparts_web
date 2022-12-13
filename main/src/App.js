@@ -16,9 +16,14 @@ import {
   onAuthStateChangedListener,
   createUserDocumentFromAuth,
 } from './utils/firebase/firebase.utils';
+import PartList from './components/part-list/part-list-component';
 
 const App = () => {
   const [searchField, setSearchField] = useState(""); //[value,setValue]
+
+  const [parts, setParts] = useState([]);
+
+  const [filteredParts, setFilteredParts] = useState(parts);
 
   const dispatch = useDispatch();
 
@@ -27,12 +32,19 @@ const App = () => {
       if (user) {
         createUserDocumentFromAuth(user);
       }
-
       dispatch(setCurrentUser(user));
     });
 
     return unsubscribe;
   }, [dispatch]);
+
+  useEffect(() => {
+    const newFilteredPart = parts.filter((part) => {
+      return part.name.toLocaleLowerCase().includes(searchField);
+    });
+    setFilteredParts(newFilteredPart);
+  }, [parts, searchField]);
+  
   const onSearchChange = (event) => {
     const searchFieldString = event.target.value.toLocaleLowerCase();
     setSearchField(searchFieldString);
@@ -40,14 +52,19 @@ const App = () => {
 
   return (
    
+    
     <Routes>
       <Route path='/' element={<Navigation />}>
         <Route index element={<Home />} />
         <Route path='shop/*' element={<Shop />} />
         <Route path='auth' element={<Authentication />} />
+       
    
       </Route>
+
+  
     </Routes>
+    
     
     
   );

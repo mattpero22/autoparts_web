@@ -8,7 +8,7 @@ const Home = () => {
 
   
     <div>
-        <HomeTitle> ALPHA AUTO PARTS </HomeTitle>
+        <HomeTitle> Auto Parts Catalog </HomeTitle>
        <Outlet />
         <Directory />
         
